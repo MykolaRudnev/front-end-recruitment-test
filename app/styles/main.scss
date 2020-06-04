@@ -1,0 +1,17 @@
+@import 'colors.scss';
+@import 'button.scss';
+@import 'inputs.scss';
+ 
+ 
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+}
+.custommer-info {
+  width: 70%;
+  margin-left: 20vh;
+}
+.orders {
+  width: 30%;
+}

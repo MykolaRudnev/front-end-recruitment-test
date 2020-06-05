@@ -2,16 +2,90 @@
 @import 'button.scss';
 @import 'inputs.scss';
  
- 
-
+body {
+  background: $main-white-background;
+} 
+h2 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
 .main-layout {
     display: flex;
     flex-direction: row;
+    margin: 0 6vw;
 }
 .customer-info {
   width: 70%;
-  margin-left: 20vh;
+  // margin-left: 20vh;
 }
 .customer-orders {
   width: 30%;
+  margin-left: 38px;
+  margin-top: 64px;
+  background: $white;
+  padding: 4px 4px;
+  height: 100%;
+
+p{
+  margin: 0px 0 6px;
+}
+  span{
+    float: right;
+  }
+   
+  h2 {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+  .total, .prace {
+    padding-top: 8px;
+    border-top: 1px dashed #dcdcdc;
+  }
+  .wrapper-orders {
+    border: 1px dashed #dcdcdc;
+    padding: 10px 20px;
+}
+.total{
+    margin-bottom: 20px;
+  span {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 22px;
+  }
+}
+}
+.numberCircle {
+  display: flex;
+  margin: 20px 0;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+  background: #000;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.subparagraph {
+  display: flex;
+}
+.wrapper-inputs {
+  margin-left: 30px;
+}
+
+.main-button {
+  box-shadow: 0 1px 0 0 #dcdcdc;
+  border: none;
+  color: white;
+  background: $grean;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 30px;
 }

@@ -1,0 +1,115 @@
+@import 'colors.scss';
+
+.float-container {
+  
+  box-sizing: border-box;
+  margin-bottom: 8px;
+
+  position: relative;
+  width: 100%;
+  
+  input {
+    border-radius: 2px;
+    box-shadow: 0px 1px 0px 0px $second-gray;
+    border: none;
+    font-size: 16px;
+    line-height: 20px;
+    outline: 0;
+    padding: 20px 0 10px 8px;
+    width: 100%;
+
+    &.error{
+      border-style: solid;
+        border-color: red;
+        border-width: 1px;
+    }
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $gray;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $gray;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $gray;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $gray;
+    }
+
+
+  }
+
+  label {
+    width: 100%;
+    padding-left: 8px;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 600;
+    position: absolute;
+    transform-origin: top left;
+    margin-top: 7px;
+  }
+  
+}
+
+.wrapper-double-field{
+  display: flex;
+  flex-direction: row;
+  
+  .postal-code,.last-name,.expiration-date{
+    margin-left: 20px;
+  }
+}
+
+
+.subparagraph-person-info {
+  display: flex; 
+}
+
+.subparagraph-payments{
+  display: flex;
+  &::after {
+    margin-top: 24px;
+    display: block;
+    content: " ";
+    background-image: url(../images/icon_lock.svg);
+    background-size: 16px 16px;
+    height: 16px;
+    width: 16px;
+    margin-left: 12px;
+  }
+}
+.wrapper-inputs {
+  margin-left: 30px;
+}
+
+.credit-card{
+  &:before {
+    content: " ";
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    bottom: 0;
+    width: 14px;
+    background: url("../images/visa-logo.svg") center / contain no-repeat;
+    border: 1px solid $second-gray;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 4px;
+  }
+}
+.security{
+  &:before {
+    content: " ";
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    bottom: 0;
+    background: url("../images/help-outline.svg") center / contain no-repeat;
+    
+    width: 4px;
+    padding: 10px;
+    margin: 4px;
+  }
+}

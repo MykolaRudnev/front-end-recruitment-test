@@ -1,6 +1,6 @@
-@import 'colors.scss';
-@import 'button.scss';
-@import 'inputs.scss';
+@import "colors.scss";
+@import "button.scss";
+@import "inputs.scss";
  
 body {
   background: $main-white-background;
@@ -41,10 +41,10 @@ p{
   }
   .total, .prace {
     padding-top: 8px;
-    border-top: 1px dashed #dcdcdc;
+    border-top: 1px dashed $second-gray;
   }
   .wrapper-orders {
-    border: 1px dashed #dcdcdc;
+    border: 1px dashed $second-gray;
     padding: 10px 20px;
 }
 .total{
@@ -64,28 +64,9 @@ p{
   height: 16px;
   padding: 2px;
   background: #000;
-  color: white;
+  color: $white;
   align-items: center;
   justify-content: center;
   font-weight: 600;
   margin-right: 10px;
-}
-
-.subparagraph {
-  display: flex;
-}
-.wrapper-inputs {
-  margin-left: 30px;
-}
-
-.main-button {
-  box-shadow: 0 1px 0 0 #dcdcdc;
-  border: none;
-  color: white;
-  background: $grean;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 30px;
 }

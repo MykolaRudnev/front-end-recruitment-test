@@ -55,7 +55,7 @@
   
   <div class="main-layout">
     <div class="customer-info">
-      <div class="subparagraph">
+      <div class="subparagraph-person-info">
         <p class="numberCircle">1</p>
         <h2>Personal information</h2>
         </div>
@@ -108,13 +108,15 @@
         </div>
 
         <div class="payments-details">
-          <div class="subparagraph">
+          <div class="subparagraph-payments">
             <p class="numberCircle">2</p>
             <h2>Payments Details</h2>
+          
+          
           </div>
           <div class="wrapper-inputs">
             <div id="card-number" class="float-container email">
-            <label for="credit-card-number">Credit card number</label>
+            <label  class="credit-card" for="credit-card-number">Credit card number</label>
             <input type="text" id="input-card-number" 
             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
             placeholder="0000 - 0000 - 0000 - 000">
@@ -122,7 +124,7 @@
           
           <div class="wrapper-double-field">
             <div id="security-code" class="float-container password">
-              <label for="security-code">Security code</label>
+              <label  class="security" for="security-code">Security code</label>
               <input type="password" id="input-security-code" 
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
               maxlength="3" 
@@ -130,12 +132,17 @@
             </div>
             <div id="expiration-date" class="float-container expiration-date">
               <label for="expiration-date">Expiration date</label>
-              <input type="text" id="input-expiration-date" maxlength='7' placeholder="MM/YY">
+              <input type="text" id="input-expiration-date"  
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              maxlength="4"  
+              placeholder="MM/YY">
             </div>
 
           </div>
+    
          
-          <button class="main-button">Complete Purchase</button>
+           <button class="main-button" onclick ="validate()">Complete Purchase</button>
+
       
         </div>
         </div>
@@ -161,6 +168,7 @@
     
     </div>
   </div>
+  <script src="scripts/validation.js"></script>
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>

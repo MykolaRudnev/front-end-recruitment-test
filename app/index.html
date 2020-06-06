@@ -66,22 +66,22 @@
           <div class="wrapper-double-field">
           <div id="first-name" class="float-container first-name">
             <label for="first-name">First name </label>
-            <input type="text" id="input-first-name" placeholder="Elon">
+            <input type="text" class="validate-input" placeholder="Elon">
           </div>
         
           <div id="last-name" class="float-container last-name">
             <label for="last-name">Last name</label>
-            <input type="text" id="input-last-name" placeholder="Musk">
+            <input type="text" class="validate-input" placeholder="Musk">
           </div>
         </div>
           <div id="email" class="float-container email">
             <label for="email">Email</label>
-            <input type="text" id="input-email" placeholder="elon@spacex.com">
+            <input type="text" class="validate-input" placeholder="elon@spacex.com">
           </div>
           <div class="wrapper-double-field">
             <div id="country" class="float-container country">
               <label for="country">Country</label>
-              <input  list="select" type="text" id="input-country"  >
+              <input  list="select" type="text" class="validate-input"  >
               <datalist class="form-control" id="select">    
                 <option value="United Stetes"/>
                 <option value="Poland"/>
@@ -92,8 +92,9 @@
             <div id="postal-code" class="float-container postal-code">
               <label for="postal-code">Postal code</label>
               <input type="text"
+              maxlength="5" 
                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
-               id="input-postal-code" 
+               class="validate-input"
                placeholder="10001">
             </div>
           </div>
@@ -103,7 +104,7 @@
             <label for="phone-number">Phone number</label>
             <input type="tel" 
             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
-            id="input-phone-number" placeholder="(212) 692-93-92">
+            class="validate-input" placeholder="(212) 692-93-92">
           </div>
         </div>
 
@@ -117,7 +118,7 @@
           <div class="wrapper-inputs">
             <div id="card-number" class="float-container email">
             <label  class="credit-card" for="credit-card-number">Credit card number</label>
-            <input type="text" id="input-card-number" 
+            <input type="text" class="validate-input"
             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
             placeholder="0000 - 0000 - 0000 - 000">
           </div>
@@ -125,14 +126,14 @@
           <div class="wrapper-double-field">
             <div id="security-code" class="float-container password">
               <label  class="security" for="security-code">Security code</label>
-              <input type="password" id="input-security-code" 
+              <input type="password" class="validate-input" 
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
               maxlength="3" 
               placeholder="***">
             </div>
             <div id="expiration-date" class="float-container expiration-date">
               <label for="expiration-date">Expiration date</label>
-              <input type="text" id="input-expiration-date"  
+              <input type="text" class="validate-input"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
               maxlength="4"  
               placeholder="MM/YY">

@@ -1,25 +1,29 @@
 @import "colors.scss";
 @import "button.scss";
 @import "inputs.scss";
- 
+
 body {
   background: $main-white-background;
-} 
+}
+
 h2 {
   font-size: 14px;
   line-height: 16px;
   font-weight: 800;
   text-transform: uppercase;
 }
+
 .main-layout {
-    display: flex;
-    flex-direction: row;
-    margin: 0 6vw;
+  display: flex;
+  flex-direction: row;
+  margin: 0 6vw;
 }
+
 .customer-info {
   width: 70%;
   // margin-left: 20vh;
 }
+
 .customer-orders {
   width: 30%;
   margin-left: 38px;
@@ -28,34 +32,41 @@ h2 {
   padding: 4px 4px;
   height: 100%;
 
-p{
-  margin: 0px 0 6px;
-}
-  span{
+  p {
+    margin: 0px 0 6px;
+  }
+
+  span {
     float: right;
   }
-   
+
   h2 {
     margin-top: 8px;
     margin-bottom: 12px;
   }
-  .total, .prace {
+
+  .total,
+  .prace {
     padding-top: 8px;
     border-top: 1px dashed $second-gray;
   }
+
   .wrapper-orders {
     border: 1px dashed $second-gray;
     padding: 10px 20px;
-}
-.total{
+  }
+
+  .total {
     margin-bottom: 20px;
-  span {
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 22px;
+
+    span {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 22px;
+    }
   }
 }
-}
+
 .numberCircle {
   display: flex;
   margin: 20px 0;

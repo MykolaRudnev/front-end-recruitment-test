@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Web Starter Kit" />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="images/touch/chrome-touch-icon-192x192.png"
+    />
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit" />
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png" />
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta
+      name="msapplication-TileImage"
+      content="images/touch/ms-touch-icon-144x144-precomposed.png"
+    />
+    <meta name="msapplication-TileColor" content="#2F3BA2" />
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2" />
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <!-- Material Design icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- Material Design Lite page styles:
+    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
+    Format: material.color1-color2.min.css, some examples:
+    material.red-teal.min.css
+    material.blue-orange.min.css
+    material.purple-indigo.min.css
+    -->
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css"
+    />
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"></div>
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+      <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+      </div>
+      <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        <h3>Checkout</h3>
+      </div>
+      <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+      </div>
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+        <a href="#overview" class="mdl-layout__tab is-active">Checkout</a>
+      </div>
+    </header>
+    
+    <div class="main-layout">
+      <div class="customer-info">
+        <div class="subparagraph-person-info">
+          <p class="numberCircle">1</p>
+          <h2>Personal information</h2>
+        </div>
+        <div class="wrapper-inputs">
+          <div class="wrapper-double-field">
+            <div id="first-name" class="float-container first-name">
+              <label for="first-name">First name </label>
+              <input type="text" class="validate-input" placeholder="Elon" />
+            </div>
+
+            <div id="last-name" class="float-container last-name">
+              <label for="last-name">Last name</label>
+              <input type="text" class="validate-input" placeholder="Musk" />
+            </div>
+          </div>
+          <div id="email" class="float-container email">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="validate-input"
+              placeholder="elon@spacex.com"
+            />
+          </div>
+          <div class="wrapper-double-field">
+            <div id="country" class="float-container country">
+              <label for="country">Country</label>
+              <input list="select" type="text" class="validate-input" />
+              <datalist class="form-control" id="select">
+                <option value="United Stetes" />
+                <option value="Poland" />
+                <option value="Ukrain" />
+              </datalist>
+            </div>
+
+            <div id="postal-code" class="float-container postal-code">
+              <label for="postal-code">Postal code</label>
+              <input
+                type="text"
+                maxlength="5"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                class="validate-input"
+                placeholder="10001"
+              />
+            </div>
+          </div>
+
+          <div id="phone-number" class="float-container phone-number">
+            <label for="phone-number">Phone number</label>
+            <input
+              type="tel"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              class="validate-input"
+              placeholder="(212) 692-93-92"
+            />
+          </div>
+        </div>
+
+        <div class="payments-details">
+          <div class="subparagraph-payments">
+            <p class="numberCircle">2</p>
+            <h2>Payments Details</h2>
+          </div>
+          <div class="wrapper-inputs">
+            <div id="card-number" class="float-container email">
+              <label class="credit-card" for="credit-card-number"
+                >Credit card number</label
+              >
+              <input
+                type="text"
+                class="validate-input"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                maxlength="16"
+                placeholder="0000 - 0000 - 0000 - 000"
+              />
+            </div>
+
+            <div class="wrapper-double-field">
+              <div id="security-code" class="float-container password">
+                <label class="security" for="security-code"
+                  >Security code</label
+                >
+                <input
+                  type="password"
+                  class="validate-input"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                  maxlength="3"
+                  placeholder="***"
+                />
+              </div>
+              <div id="expiration-date" class="float-container expiration-date">
+                <label for="expiration-date">Expiration date</label>
+                <input
+                  type="text"
+                  class="validate-input"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                  maxlength="4"
+                  placeholder="MM/YY"
+                />
+              </div>
+            </div>
+
+            <button class="main-button" onclick="validate()">
+              Complete Purchase
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="customer-orders">
+        <div class="wrapper-orders">
+          <h2>Yore Order</h2>
+          <div class="order">
+            <p>Apple Watch Sport <span>$ 580</span></p>
+            <p>Modern Buckle <span>$ 380</span></p>
+          </div>
+          <div class="prace">
+            <p>Total purchases <span>$ 960.00</span></p>
+            <p>Estimated tax <span>$ 0</span></p>
+          </div>
+          <div class="total">
+            <p>Total <span>$ 960</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="mdl-mega-footer">
+    <div class="mdl-mega-footer--middle-section">
+      <div class="mdl-mega-footer--drop-down-section">
+        <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer--heading">Features</h1>
+        <ul class="mdl-mega-footer--link-list">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Updates</a></li>
+        </ul>
+      </div>
+      <div class="mdl-mega-footer--drop-down-section">
+        <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer--heading">Details</h1>
+        <ul class="mdl-mega-footer--link-list">
+          <li><a href="#">Spec</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+      </div>
+      <div class="mdl-mega-footer--drop-down-section">
+        <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer--heading">Technology</h1>
+        <ul class="mdl-mega-footer--link-list">
+          <li><a href="#">How it works</a></li>
+          <li><a href="#">Patterns</a></li>
+          <li><a href="#">Usage</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contracts</a></li>
+        </ul>
+      </div>
+      <div class="mdl-mega-footer--drop-down-section">
+        <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer--heading">FAQ</h1>
+        <ul class="mdl-mega-footer--link-list">
+          <li><a href="#">Questions</a></li>
+          <li><a href="#">Answers</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mdl-mega-footer--bottom-section">
+      <div class="mdl-logo">
+        More Information
+      </div>
+      <ul class="mdl-mega-footer--link-list">
+        <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy and Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+    <script src="scripts/validation.js"></script>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <!-- build:js scripts/main.min.js -->
+    <script src="scripts/main.js"></script>
+    <!-- <script src="./scripts/activeInput.js"></script> -->
+    <!-- endbuild -->
+  </body>
+</html>

@@ -20,7 +20,12 @@
 
     &.error {
       border-style: solid;
-      border-color: red;
+      border-color: $error;
+      border-width: 1px;
+    }
+    &.success {
+      border-style: solid;
+      border-color: $second-grean;
       border-width: 1px;
     }
 
